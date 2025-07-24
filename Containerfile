@@ -23,7 +23,7 @@ RUN ./gradlew createMojmapBundlerJar
 
 FROM eclipse-temurin:21-jre AS main
 
-COPY --from=build /Paper/paper-server/build/libs/paper-bundler-1.21.7-R0.1-SNAPSHOT-mojmap.jar /paper-server.jar
+COPY --from=build /Paper/paper-server/build/libs/paper-bundler-* /paper-server.jar
 
 # ADD entrypoint.sh /entrypoint.sh
 # ENTRYPOINT ["/entrypoint.sh"]
